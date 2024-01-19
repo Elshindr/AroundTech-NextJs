@@ -1,0 +1,16 @@
+.login_card {
+  box-shadow: 0 3px 10px 0 var(--color-primary)
+}
+
+.button_connect{
+  color: var(--color-secondary);
+  background: none;
+  border: 2px solid var(--color-secondary);
+  border-radius: 10px;
+}
+
+.button_connect:hover {
+  color: white;
+  background: var(--color-secondary);
+  border: 2px solid var(--color-secondary);
+}

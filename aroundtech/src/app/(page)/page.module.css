@@ -1,0 +1,17 @@
+.userInfo {
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userName {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.citation {
+  text-align: center;
+  margin-top: 90px;
+}

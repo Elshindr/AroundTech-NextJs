@@ -1,0 +1,64 @@
+#infos-primes-cont,
+form {
+    display: flex;
+    flex-direction: row;
+    justify-items: left;
+    gap: 2em;
+    margin-left: 2em;
+}
+
+#data-primes-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2em;
+}
+
+.form-data{
+    width: 6em;
+}
+
+.button_add{
+    color: #169565f0;
+    border: 2px solid;
+}
+.button_add:hover:enabled{
+    color: white !important;
+    border: 2px solid;
+    background-color: #169565f0 !important;
+}
+
+.button_add:disabled{
+    color: #825f8af0  !important;
+    border: 2px solid;
+    cursor:not-allowed;
+    background-color: white !important;
+}
+
+
+
+
+
+#graph {
+    width: 40em;
+    height: 10em;
+}
+
+/* Media Query pour les écrans de taille moyenne */
+@media (max-width: 768px) {
+    #data-primes-cont{
+        flex-direction: column;
+    }
+
+    #graph {
+        width: 20em;
+        height: 10em;
+    }
+}
+
+/* Media Query pour les écrans de petite taille */
+@media (max-width: 480px) {
+    .bloc-component {
+        margin: 2em;
+    }
+}

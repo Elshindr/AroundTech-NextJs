@@ -1,0 +1,17 @@
+.errorLabel{
+    color:var(--color-quaternary);
+}
+
+.infos-group{
+    display: flex;
+    flex-direction: row;
+}
+
+.label-info-group{
+    flex: 1;
+    font-weight: 600;
+    margin-left: 5em;
+}
+.data-info-group{
+    flex: 1;
+}

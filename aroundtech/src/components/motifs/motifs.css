@@ -1,0 +1,7 @@
+#title-cont{
+    display:flex;
+    flex-direction:row;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}

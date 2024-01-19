@@ -1,0 +1,112 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DB_URL")
+}
+
+model city {
+  id                                      Int       @id @default(autoincrement())
+  name                                    String?   @db.VarChar(255)
+  mission_mission_arrival_city_idTocity   mission[] @relation("mission_arrival_city_idTocity")
+  mission_mission_departure_city_idTocity mission[] @relation("mission_departure_city_idTocity")
+}
+
+model expense_report {
+  id                Int            @id @default(autoincrement())
+  amount            Float?         @db.Float
+  created_at        DateTime?      @db.Date
+  valid_at          DateTime?      @db.Date
+  mission_id        Int
+  nature_expense_id Int
+  mission           mission        @relation(fields: [mission_id], references: [id], onUpdate: Restrict, map: "expense_report_ibfk_3")
+  nature_expense    nature_expense @relation(fields: [nature_expense_id], references: [id], onUpdate: Restrict, map: "expense_report_ibfk_4")
+
+  @@index([mission_id], map: "expense_report_ibfk_3")
+  @@index([nature_expense_id], map: "expense_report_ibfk_4")
+}
+
+model mission {
+  id                                                       Int              @id @default(autoincrement())
+  nature_mission_id                                        Int?
+  departure_city_id                                        Int?
+  arrival_city_id                                          Int?
+  start_date                                               DateTime?        @db.Date
+  end_date                                                 DateTime?        @db.Date
+  status_id                                                Int?
+  user_id                                                  Int?
+  transport_id                                             Int?
+  init_nat_mis_id                                          Int?
+  expense_report                                           expense_report[]
+  user                                                     user?            @relation(fields: [user_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "mission_ibfk_1")
+  transport                                                transport?       @relation(fields: [transport_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "mission_ibfk_2")
+  status                                                   status?          @relation(fields: [status_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "mission_ibfk_3")
+  city_mission_arrival_city_idTocity                       city?            @relation("mission_arrival_city_idTocity", fields: [arrival_city_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "mission_ibfk_4")
+  city_mission_departure_city_idTocity                     city?            @relation("mission_departure_city_idTocity", fields: [departure_city_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "mission_ibfk_5")
+  nature_mission_mission_nature_mission_idTonature_mission nature_mission?  @relation("mission_nature_mission_idTonature_mission", fields: [nature_mission_id], references: [id], onDelete: Restrict, onUpdate: Restrict, map: "mission_ibfk_6")
+  nature_mission_mission_init_nat_mis_idTonature_mission   nature_mission?  @relation("mission_init_nat_mis_idTonature_mission", fields: [init_nat_mis_id], references: [id], onDelete: Restrict, onUpdate: Restrict, map: "mission_ibfk_7")
+
+  @@index([arrival_city_id], map: "arrival_city_id")
+  @@index([departure_city_id], map: "departure_city_id")
+  @@index([nature_mission_id], map: "mission_ibfk_6")
+  @@index([init_nat_mis_id], map: "mission_ibfk_7")
+  @@index([status_id], map: "status_id")
+  @@index([transport_id], map: "transport_id")
+  @@index([user_id], map: "user_id")
+}
+
+model nature_expense {
+  id             Int              @id @default(autoincrement())
+  name           String           @db.VarChar(255)
+  is_capped      Boolean          @default(false)
+  cap_value      Float            @default(0) @db.Float
+  expense_report expense_report[]
+}
+
+model nature_mission {
+  id                                                Int       @id @default(autoincrement())
+  name                                              String?   @db.VarChar(255)
+  is_charge                                         Boolean?
+  is_bonus                                          Boolean?
+  tjm                                               Float?    @db.Float
+  percentage                                        Float?    @db.Float
+  mission_mission_nature_mission_idTonature_mission mission[] @relation("mission_nature_mission_idTonature_mission")
+  mission_mission_init_nat_mis_idTonature_mission   mission[] @relation("mission_init_nat_mis_idTonature_mission")
+}
+
+model role {
+  id   Int     @id @default(autoincrement())
+  name String? @db.VarChar(255)
+  user user[]
+}
+
+model status {
+  id      Int       @id @default(autoincrement())
+  name    String?   @db.VarChar(255)
+  mission mission[]
+}
+
+model transport {
+  id      Int       @id @default(autoincrement())
+  name    String?   @db.VarChar(255)
+  mission mission[]
+}
+
+model user {
+  id         Int       @id @default(autoincrement())
+  firstname  String?   @db.VarChar(255)
+  lastname   String?   @db.VarChar(255)
+  email      String    @unique @db.VarChar(255)
+  password   String?   @db.VarChar(255)
+  role_id    Int
+  manager_id Int
+  mission    mission[]
+  role       role      @relation(fields: [role_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "user_ibfk_1")
+  user       user      @relation("userTouser", fields: [manager_id], references: [id], onUpdate: Restrict, map: "user_ibfk_2")
+  other_user user[]    @relation("userTouser")
+
+  @@index([role_id], map: "role_id")
+  @@index([manager_id], map: "user_ibfk_2")
+}

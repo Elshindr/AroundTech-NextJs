@@ -1,0 +1,50 @@
+{
+  "name": "aroundtech",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "leaves": "json-server --watch src/data-abs/db.json --port 8000",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@headlessui/react": "^1.7.17",
+    "@mui/icons-material": "^5.14.14",
+    "@mui/material": "^5.14.14",
+    "@prisma/client": "^5.5.2",
+    "bcryptjs": "^2.4.3",
+    "bootstrap": "^5.3.2",
+    "chart.js": "^4.4.0",
+    "cookie": "^0.6.0",
+    "date-fns": "^2.30.0",
+    "date-holidays": "^3.23.0",
+    "export-from-json": "^1.7.3",
+    "json-server": "^0.17.4",
+    "jsonwebtoken": "^9.0.2",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.7.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.6.2",
+    "next": "^13.5.6",
+    "node-cron": "^3.0.2",
+    "nodemailer": "^6.9.7",
+    "react": "^18.2.0",
+    "react-big-calendar": "^1.8.5",
+    "react-bootstrap": "^2.9.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@react-email/components": "0.0.11",
+    "@react-email/render": "0.0.9",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8",
+    "eslint-config-next": "13.5.6",
+    "postcss": "^8.4.31",
+    "prisma": "^5.5.2",
+    "tailwindcss": "^3.3.3"
+  }
+}

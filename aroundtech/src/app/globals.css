@@ -1,0 +1,303 @@
+/* ----------------- */
+/*     VARIABLES     */
+/* ----------------- */
+
+:root {
+  --color-primary: #15C39A;
+  --color-secondary: #7349a6;
+  --color-tertiary: #8A8A8A;
+  --color-quaternary: #C2143D;
+}
+
+/* ----------------- */
+/*     RESET CSS     */
+/* ----------------- */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-text-inter);
+  line-height: 1.6;
+  font-size: 18px;
+  min-height: 100vh;
+  /*display: flex;
+  flex-direction: column; */
+  /* overflow: hidden; */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a:hover {
+  color: var(--color-primary) !important;
+}
+
+h1 {
+  font-family: var(--font-title-poppins);
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  color: var(--color-secondary);
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+.table-subtitle {
+  font-family: var(--font-subtitle-lato);
+  font-size: 22px;
+}
+
+/* ----------------- */
+/*       HEADER      */
+/* ----------------- */
+ header {
+  font-size: 15px;
+ }
+
+ .active {
+    color: var(--color-primary) !important;
+    font-weight: 600;
+  }
+
+  .active > a.dropdown-toggle.nav-link {
+    color: var(--color-primary) !important;
+    font-weight: 600;
+  }
+
+ .logout-icon {
+  color: var(--color-secondary);
+ }
+
+ .logout-icon:hover {
+  color: var(--color-quaternary);
+  cursor: pointer;
+ }
+
+ .account-icon:hover, .account-name:hover, a.account-link.nav-link:hover{
+  color: rgba(0, 0, 0, 0.65) !important;
+  cursor: default;
+ }
+
+ .info-icon {
+  color: var(--color-primary);
+ }
+
+ #dropdown-nav {
+  background: none;
+  border:none;
+}
+
+@media (max-width: 1400px) {
+  .navbar-brand {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .d-flex {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col-2 {
+    width: 100% !important; 
+  }
+}
+
+/* ----------------- */
+/*       FOOTER      */
+/* ----------------- */
+footer {
+  width: 100%; height: 130px;
+  bottom: 0; left: 0; right: 0;
+}
+
+footer span {
+  font-size : 10px;
+}
+
+.footer-home{
+  position: absolute;
+}
+
+/* ----------------- */
+/*    BUTTON ADD     */
+/* ----------------- */
+
+.button_add,
+.button_add::after {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.button_add {
+  color: var(--color-secondary);
+  background: none;
+  border: 2px solid var(--color-secondary);
+  border-radius: 10px;
+  display: block;
+  position: relative;
+  padding: 4px 14px 4px 14px;
+}
+
+.button_add,
+.button_add::after {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.button_add::before,
+.button_add::after {
+  background: var(--color-secondary);
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.button_add:hover {
+  color: white;
+  background: var(--color-secondary);
+  border: 2px solid var(--color-secondary);
+}
+
+.button_add::after {
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 0;
+}
+
+.button_add:hover:after {
+  width: 100%;
+}
+
+/* ----------------- */
+/*       ICON        */
+/* ----------------- */
+
+.icon_edit {
+  color: var(--color-secondary);
+}
+
+.icon_delete {
+  color: var(--color-quaternary);
+}
+
+.button_icon {
+  background: none;
+  border: none;
+  display: inline-flex;
+  border-radius: 50%;
+  padding: 8px;
+  transition: background-color 0.3s;
+}
+
+.button_edit:hover {
+  background-color: var(--color-secondary);
+}
+
+.button_delete:hover {
+  background-color: var(--color-quaternary);
+}
+
+.button_icon:hover .icon_edit,
+.button_icon:hover .icon_delete {
+  color: white;
+}
+
+/* ----------------- */
+/*       MODAL       */
+/* ----------------- */
+
+.btn-modal-success {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+.btn-modal-success:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-modal-cancel {
+  background-color: var(--color-quaternary);
+  border-color: var(--color-quaternary);
+}
+
+.btn-modal-cancel:hover {
+  background-color: #EF6686;
+  border-color: #EF6686;
+}
+
+.modal-header-title {
+  margin-left: 33%;
+  color: var(--color-primary);
+  font-family: var(--font-subtitle-lato);
+  font-weight: 700;
+}
+
+/* ----------------- */
+/*      DIALOG       */
+/* ----------------- */
+
+.dialog-title {
+  text-align: center;
+  color: var(--color-primary);
+  font-family: var(--font-subtitle-lato);
+  font-weight: 700;
+}
+
+.dialog-message {
+  font-family: var(--font-subtitle-lato);
+  color: black;
+}
+
+.dialog-buttons .confirm-button {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  font-family: var(--font-text-inter);
+  text-transform: capitalize;
+  color: white;
+}
+
+.dialog-buttons .confirm-button:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.dialog-buttons .cancel-button {
+  background-color: var(--color-quaternary);
+  border-color: var(--color-quaternary);
+  font-family: var(--font-text-inter);
+  text-transform: capitalize;
+  color: white;
+}
+
+.dialog-buttons .cancel-button:hover {
+  background-color: #EF6686;
+  border-color: #EF6686;
+}
+
+/* ----------------- */
+/*    PAGINATION     */
+/* ----------------- */
+.page-link.active, .active > .page-link {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+.page-link {
+  color: var(--color-secondary); 
+}

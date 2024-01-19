@@ -1,0 +1,96 @@
+/* ------------------------- */
+/*       expenseSaisie       */
+/* ------------------------- */
+
+#title-cont{
+    display:flex;
+    flex-direction:row;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#link-return{
+    color:var(--color-secondary);
+    margin-top: 1.2em;
+}
+#link-return:hover{
+    color:white !important;
+}
+
+.bloc-component {
+    margin: 5em;
+}
+
+#infos-mission-cont {
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+    margin: auto;
+    margin-bottom: 5em;
+    width: fit-content;
+}
+
+.infos-mission {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+
+.label-info-mission {
+    width: 13.8em;
+    font-weight: 600;
+    flex: 1;
+}
+
+.data-info-mission {
+    flex: 1
+}
+
+/* Media Query pour les écrans de taille moyenne */
+@media (max-width: 768px) {
+    #infos-mission-cont {
+        flex-direction: column;
+    }
+
+    .infos-mission {
+        gap: 1em;
+    }
+}
+
+/* Media Query pour les écrans de petite taille */
+@media (max-width: 480px) {
+    .bloc-component {
+        margin: 2em;
+    }
+}
+
+
+/* ------------------------- */
+/*       expenseGestion      */
+/* ------------------------- */
+
+.button-container-gestion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button_gestion {
+    color: var(--color-secondary);
+}
+
+.button_pdf {
+    color: var(--color-quaternary);
+}
+
+.button_gestion:hover {
+    color: white;
+    background: var(--color-secondary);
+}
+
+.button_pdf:hover {
+    color: white;
+    background: var(--color-quaternary);
+}

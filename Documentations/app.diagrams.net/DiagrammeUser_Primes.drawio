@@ -1,0 +1,92 @@
+<mxfile host="app.diagrams.net" modified="2023-11-14T16:57:58.185Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="jRq0o5P4o9B1-FQJVQ-9" version="22.1.1" type="google">
+  <diagram name="Page-1" id="wPaHbWEFRexfT1x8kU7l">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="cJEHaEzW8bS9OZOG30rP-26" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-130" y="-20" width="920" height="810" as="geometry" />
+        </mxCell>
+        <mxCell id="cJEHaEzW8bS9OZOG30rP-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="cJEHaEzW8bS9OZOG30rP-2" target="cJEHaEzW8bS9OZOG30rP-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="19.97" y="259.03030303030323" as="sourcePoint" />
+            <mxPoint x="45" y="-17" as="targetPoint" />
+            <Array as="points">
+              <mxPoint y="259" />
+              <mxPoint y="132" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cJEHaEzW8bS9OZOG30rP-2" value="Manager" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="-70" y="472" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cJEHaEzW8bS9OZOG30rP-3" value="Employé" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="-70" y="109" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cJEHaEzW8bS9OZOG30rP-4" value="Collaborateur" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="109" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cJEHaEzW8bS9OZOG30rP-5" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;App&amp;nbsp; (Primes)&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="290" y="710" width="270" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cJEHaEzW8bS9OZOG30rP-6" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Visualiser ses primes&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="310" width="170" height="68.5" as="geometry" />
+        </mxCell>
+        <mxCell id="cJEHaEzW8bS9OZOG30rP-7" value="Se connecter" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="275" y="30" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="cJEHaEzW8bS9OZOG30rP-8" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="endArrow=open;startArrow=none;endFill=0;startFill=0;endSize=8;html=1;verticalAlign=bottom;dashed=1;labelBackgroundColor=none;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="cJEHaEzW8bS9OZOG30rP-23" target="cJEHaEzW8bS9OZOG30rP-6">
+          <mxGeometry x="0.0015" y="-15" width="160" relative="1" as="geometry">
+            <mxPoint x="279" y="100" as="sourcePoint" />
+            <mxPoint x="380" y="85" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cJEHaEzW8bS9OZOG30rP-9" value="Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="-70" y="580" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cJEHaEzW8bS9OZOG30rP-10" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="cJEHaEzW8bS9OZOG30rP-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="139" as="sourcePoint" />
+            <mxPoint x="190" y="272" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cJEHaEzW8bS9OZOG30rP-11" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="cJEHaEzW8bS9OZOG30rP-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="260" as="sourcePoint" />
+            <mxPoint x="30" y="612" as="targetPoint" />
+            <Array as="points">
+              <mxPoint y="612" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cJEHaEzW8bS9OZOG30rP-12" value="&amp;lt;&amp;lt;includes&amp;gt;&amp;gt;" style="endArrow=open;startArrow=none;endFill=0;startFill=0;endSize=8;html=1;verticalAlign=bottom;dashed=1;labelBackgroundColor=none;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="cJEHaEzW8bS9OZOG30rP-6" target="cJEHaEzW8bS9OZOG30rP-7">
+          <mxGeometry x="-0.1111" y="35" width="160" relative="1" as="geometry">
+            <mxPoint x="216" y="364" as="sourcePoint" />
+            <mxPoint x="220" y="75" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cJEHaEzW8bS9OZOG30rP-23" value="Exporter en excel les primes d&#39;une année" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="550" y="310" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="cJEHaEzW8bS9OZOG30rP-24" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="cJEHaEzW8bS9OZOG30rP-4" target="cJEHaEzW8bS9OZOG30rP-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="340" y="320" as="sourcePoint" />
+            <mxPoint x="390" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cJEHaEzW8bS9OZOG30rP-27" value="Sélectionner une année" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="275" y="462" width="135" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="cJEHaEzW8bS9OZOG30rP-28" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="endArrow=open;startArrow=none;endFill=0;startFill=0;endSize=8;html=1;verticalAlign=bottom;dashed=1;labelBackgroundColor=none;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="cJEHaEzW8bS9OZOG30rP-27" target="cJEHaEzW8bS9OZOG30rP-6">
+          <mxGeometry x="-0.2568" y="44" width="160" relative="1" as="geometry">
+            <mxPoint x="560" y="350" as="sourcePoint" />
+            <mxPoint x="440" y="354" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
